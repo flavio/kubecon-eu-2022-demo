@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: privileged
+spec:
+  containers:
+  - image: k8s.gcr.io/pause
+    imagePullPolicy: Always
+    name: pause
+    securityContext:
+      privileged: true
